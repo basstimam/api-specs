@@ -1,102 +1,84 @@
-# Profile Spec
+# User Spec
 
-## Login
+## Get List User
 
 Endpoint : GET /users?page=1
 
-Response Body Success : 
+Response Body Success :
+
 ```json
 {
-   "data" : [
-        {
-            "uuid":"fcb102903",
-            "username":"azki",
-            "fullname":"azkia ajmal fairuz",
-            "role":"dokter",
-        },
-        {
-            "uuid":"fcb102903",
-            "username":"azki",
-            "fullname":"azkia ajmal fairuz",
-            "role":"dokter",
-        },
-        {
-            "uuid":"fcb102903",
-            "username":"azki",
-            "fullname":"azkia ajmal fairuz",
-            "role":"dokter",
-        },
-   ],
-   "page":"1",
-   "size":"3",
-   "total_page":"20",
-   "total_data":"60",
-   "message": "success!"
-
+  "data": [
+    {
+      "uuid": "fcb102903",
+      "username": "azki",
+      "fullname": "azkia ajmal fairuz",
+      "role": "dokter"
+    },
+    {
+      "uuid": "fcb102903",
+      "username": "azki",
+      "fullname": "azkia ajmal fairuz",
+      "role": "dokter"
+    },
+    {
+      "uuid": "fcb102903",
+      "username": "azki",
+      "fullname": "azkia ajmal fairuz",
+      "role": "dokter"
+    }
+  ],
+  "page": "1",
+  "size": "3",
+  "total_page": "20",
+  "total_data": "60",
+  "message": "success!"
 }
 ```
 
-Response Body Error : 
+Response Body Error :
 500
+
 ```json
 {
-   "errors" : "internal server error"
-
+  "errors": "internal server error"
 }
 ```
 
-## Register User
+## Detail User
 
-Endpoint : GET /register-user
+Endpoint : GET /user/:userId
+Response Body Success :
 
-Request Body : 
 ```json
 {
-    "username" : "admin",
-    "password" : "123",
-    "full_name" : "Dr imam SPDI",
-    "role" : "Doctor"
+    "data":{
+        "uuid":"fcb102903",
+        "username":"azki",
+        "fullname":"azkia ajmal fairuz",
+        "role":"dokter",
+    },
+    "message":"success",
+}
+```
+Request Body Error :
+
+500
+
+```json
+{
+  "errors": "internal server error!"
 }
 ```
 
-Request Body Success : 
+## Delete User
+
+Endpoint : Delete /user/:delete
+
+Request Body Success :
+
 ```json
 {
-   "message": "user register as ${role}!"
+  "message": "user succesfuly fired!"
 }
 ```
-400
-```json
-{
-   "errors" : "field username is required!"
-
-}
-```
-
-## Change Password
-
-Endpoint : POST /change-pw/userid
-
-Request Body : 
-```json
-{
-    "new_password" : "123",
-    "confirm_password" : "123",
-}
-```
-
-Request Body Success : 
-```json
-{
-   "message": "password succesfuly change!"
-}
-```
-400
-```json
-{
-   "errors" : "passwordn not same!"
-
-}
-```
-
-
