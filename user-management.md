@@ -1,5 +1,28 @@
 # User Spec
 
+
+## Create User
+Endpoint : Post user
+
+Request body :
+
+```json
+    {
+      "username": "azki",
+      "fullname": "azkia ajmal fairuz",
+      "password":"isvillc15001",
+      "role": "dokter",
+    }
+```
+
+Response Body Success :
+
+```json
+{
+  "status_code": 200,
+  "message": "berhasil menambah user"
+}
+```
 ## Get List User
 
 Endpoint : GET /users?page=1

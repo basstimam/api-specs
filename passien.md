@@ -74,3 +74,29 @@ Response Body Success :
   "message": "success"
 }
 ```
+
+## Registrasi Passien Process
+
+Endpoint : Post register
+Request Body :
+//pas di sini, langsung ngepush ke table antrian juga
+```json
+{
+    "nomor_bpjs": "309293099",
+    "nama_passien": "azkia ajmal fairuz",
+    "tanggal_lahir": "04-12-2023",
+    "alamat": "palasari",
+    "faskes_tingkat_satu": "puskesmas",
+    "poli_id": 1,
+    "status": "menunggu"
+}
+```
+
+Response Body Success :
+
+```json
+{
+  "status_code": 200,
+  "message": "berhasil mendaftarkan passien"
+}
+```
