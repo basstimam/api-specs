@@ -32,9 +32,7 @@ Response Body Success :
   "size": "3",
   "total_page": "20",
   "total_data": "60",
-  "message": "success!",
-  "status_code":200,
-
+  "message": "success!"
 }
 ```
 
@@ -43,8 +41,7 @@ Response Body Error :
 
 ```json
 {
-  "status_code":500,
-  "message": "internal server error"
+  "errors": "internal server error"
 }
 ```
 
@@ -61,7 +58,6 @@ Response Body Success :
         "fullname":"azkia ajmal fairuz",
         "role":"dokter",
     },
-    "status_code":200,
     "message":"success",
 }
 ```
@@ -71,8 +67,7 @@ Request Body Error :
 
 ```json
 {
-  "status_code":500,
-  "message": "internal server error!"
+  "errors": "internal server error!"
 }
 ```
 
@@ -84,7 +79,6 @@ Request Body Success :
 
 ```json
 {
-  "status_code":200,
   "message": "user succesfuly fired!"
 }
 ```

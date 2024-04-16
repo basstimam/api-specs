@@ -1,45 +1,50 @@
-# User API SPEC
+# Doctor API SPEC
+
+# Passien API SPEC
 
 
 
-## Login User API
+## Get List Passien by poli 
 
-Endpoint : POST users/login
+Endpoint : GET doctor/?page=1
 
-Request Body : 
+Response Body Success : 
 ```json
 {
-    "username" : "apoteker",
-    "password" : "123",
-
+  "data": [
+    {
+      "passien_id": "1",
+      "nomor_bpjs": "309293099",
+      "nama_passien": "azkia ajmal fairuz",
+      "tanggal_lahir": "04-12-2023",
+      "alamat":"palasari",
+      "faskes_tingkat_satu":"puskesmas",
+      "poli":"umum"
+    },
+    {
+      "passien_id": "1",
+      "nomor_bpjs": "309293099",
+      "nama_passien": "azkia ajmal fairuz",
+      "tanggal_lahir": "04-12-2023",
+      "alamat":"palasari",
+      "faskes_tingkat_satu":"puskesmas",
+      "poli":"umum"
+    },
+    {
+      "passien_id": "1",
+      "nomor_bpjs": "309293099",
+      "nama_passien": "azkia ajmal fairuz",
+      "tanggal_lahir": "04-12-2023",
+      "alamat":"palasari",
+      "faskes_tingkat_satu":"puskesmas",
+      "poli":"umum"
+    },
+  ],
+  "page": "1",
+  "size": "3",
+  "total_page": "20",
+  "total_data": "60",
+  "message": "success!",
+  "status_code": 200
 }
 ```
-
-Request Body Success : 
-```json
-{
-   "data" : {
-     "token" : "unique-token"
-   }
-
-}
-```
-
-Response Body Error : 
-
-```json
-{
-   "errors" : "Username or password wrong!"
-
-}
-```
-
-
-
-
-
-
-
-
-
-
