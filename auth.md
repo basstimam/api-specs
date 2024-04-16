@@ -4,41 +4,43 @@
 
 Endpoint : GET /login
 
-Request Body : 
+Request Body :
+
 ```json
 {
-    "username" : "admin",
-    "password" : "123",
-
+  "username": "admin",
+  "password": "123"
 }
 ```
 
-Response Body Success : 
+Response Body Success :
+
 ```json
 {
-   "data" : {
-     "uuid":"fcb102903",
-     "role":"dokter",
-   },
-   "message": "Login Berhasil!"
-
+  "data": {
+    "uuid": "fcb102903",
+    "role": "dokter"
+  },
+  "message": "Login Berhasil!"
 }
 ```
 
-Response Body Error : 
+Response Body Error :
 404
+
 ```json
 {
-   "errors" : "account not found!"
-
+  "status_code": 404,
+  "message": "account not found!"
 }
 ```
 
 400
+
 ```json
 {
-   "errors" : "wrong password!"
-
+  "status_code": 400,
+  "message": "wrong password!"
 }
 ```
 
@@ -46,29 +48,33 @@ Response Body Error :
 
 Endpoint : POST /register-user
 
-Request Body : 
+Request Body :
+
 ```json
 {
-    "username" : "admin",
-    "password" : "123",
-    "full_name" : "Dr imam SPDI",
-    "role" : "Doctor"
+  "username": "admin",
+  "password": "123",
+  "full_name": "Dr imam SPDI",
+  "role": "Doctor"
 }
 ```
 
-Ressponse Body Success : 
+Ressponse Body Success :
+
 ```json
 {
-   "message": "user register as ${role}!"
+  "message": "user register as ${role}!"
 }
 ```
-Response Body Error : 
+
+Response Body Error :
 
 400
+
 ```json
 {
-   "errors" : "field username is required!"
-
+  "status_code": 400,
+  "message": "field username is required!"
 }
 ```
 
@@ -76,28 +82,31 @@ Response Body Error :
 
 Endpoint : POST /change-pw/userid
 
-Request Body : 
+Request Body :
+
 ```json
 {
-    "new_password" : "123",
-    "confirm_password" : "123",
+  "new_password": "123",
+  "confirm_password": "123"
 }
 ```
 
-Response Body Success : 
+Response Body Success :
+
 ```json
 {
-   "message": "password succesfuly change!"
+  "status_code": 200,
+  "message": "password succesfuly change!"
 }
 ```
-Response Body Error : 
+
+Response Body Error :
 
 400
+
 ```json
 {
-   "errors" : "passwordn not same!"
-
+  "status_code": 400,
+  "message": "passwordn not same!"
 }
 ```
-
-
