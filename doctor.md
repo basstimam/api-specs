@@ -8,7 +8,7 @@ Request Body :
 ```json
 {
   "pasien_id": 1,
-  "status": "PEMERIKSAAN"
+  "status": "CHECKING"
 }
 ```
 Response Body Success :
@@ -31,7 +31,7 @@ Request Body :
   "keterangan": "blblblbl",
   "hasil_diagnosa": "autis",
   "user_id":"fcaskjijw",
-  "status": "SELESAI"
+  "status": "PICKUP"
 }
 ```
 
